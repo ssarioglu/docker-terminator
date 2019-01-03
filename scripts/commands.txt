@@ -1,0 +1,7 @@
+#This commands may help to remember usefull things. 
+
+#For loop
+for i in {1..5000}; do docker pull ssarioglu/alpine&&docker image rm ssarioglu/alpine; done
+
+#Before running Zmap run
+netstat -rn | grep 0.0.0.0
