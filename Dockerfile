@@ -15,8 +15,9 @@ RUN pip install azure-cli
 
 
 #Copy Scripts
-#COPY scripts /scripts
-#COPY motd /etc/motd
-#RUN chmod -R 777 /scripts
+COPY scripts /scripts
+COPY motd /etc/motd
+RUN chmod -R 777 /scripts
+RUN chmod -R 777 /etc/motd
 
 ENTRYPOINT ["/bin/bash"]
