@@ -10,7 +10,7 @@ RUN apt-get install -y nmap zmap
 RUN pip install --upgrade pip
 
 # Install Azure CLI and AWS CLI
-RUN pip install --upgrade awscli python-magic
+RUN pip install awscli --upgrade 
 RUN pip install azure-cli
 
 
