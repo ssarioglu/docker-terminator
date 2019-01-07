@@ -16,7 +16,7 @@ RUN pip install azure-cli
 
 #Copy Scripts
 COPY scripts /scripts
-COPY docker-motd /etc/update-motd.d/
+COPY 11-docker /etc/update-motd.d/
 RUN chmod -R 777 /scripts
 RUN chmod -R 777 /etc/update-motd.d/
 
