@@ -23,3 +23,15 @@ Disclaimer
 Use dockerfiles for educational purposes. Project license does not apply to use of this material.
 
 Serdar SARIOGLU ([Twitter](https://twitter.com/serdarsarioglu) | [Linkedin](https://www.linkedin.com/in/serdarsarioglu) | [Blog](http://mysystem.org))
+
+
+```
+                        ##         .
+                  ## ## ##        ==
+               ## ## ## ## ##    ===
+           /"""""""""""""""""\___/ ===
+      ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~ /  ===- ~~~
+           \______ o           __/
+             \    \         __/
+              \____\_______/
+```
