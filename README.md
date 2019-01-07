@@ -9,7 +9,8 @@ Yet another docker image contains;
 - Nmap
 - Zmap
 - MTR
-- Hping3 
+- Hping3
+- Redis Cli
 
 Run Docker Container
 -----------------

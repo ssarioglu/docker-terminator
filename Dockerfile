@@ -4,7 +4,7 @@ MAINTAINER Serdar Sarioglu, Serdar.Sarioglu@mysystem.org
 # Install Basic Tools
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install -y wget curl git docker python-pip python-dev build-essential
-RUN apt-get install -y nmap zmap dnsutils htop
+RUN apt-get install -y nmap zmap dnsutils htop redis-tools
 
 # Upgrade PIP
 RUN pip install --upgrade pip
