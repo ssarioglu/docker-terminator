@@ -5,3 +5,6 @@ for i in {1..5000}; do docker pull ssarioglu/alpine&&docker image rm ssarioglu/a
 
 #Before running Zmap run
 netstat -rn | grep 0.0.0.0
+
+#Check Web Page
+while true;  do if (( $( curl -Is http://virtual-machine-ip | head -1 | grep -c "200" ) > 0 )) ; then printf "Working\r\n"; else printf "Not working\r\n"; fi; sleep 2; done
