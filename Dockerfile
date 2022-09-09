@@ -14,7 +14,6 @@ RUN pip install --upgrade pip
 RUN pip install awscli --upgrade 
 RUN pip install azure-cli
 
-
 #Copy Scripts
 COPY scripts /scripts
 COPY 11-docker /etc/update-motd.d/
