@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:latest
 MAINTAINER Serdar Sarioglu, Serdar.Sarioglu@mysystem.org
 
 # Install Basic Tools
