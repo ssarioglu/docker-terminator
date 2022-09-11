@@ -4,7 +4,7 @@ MAINTAINER Serdar Sarioglu, Serdar.Sarioglu@mysystem.org
 # Install Basic Tools
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install -y build-essential ca-certificates wget curl git docker vim nano unzip mysql-client redis-tools nmap zmap dnsutils htop 
-RUN apt install -y python3-pip
+RUN apt install -y python3-pip speedtest-cli
 
 # Upgrade PIP
 RUN pip install --upgrade pip
