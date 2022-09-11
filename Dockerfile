@@ -3,7 +3,7 @@ MAINTAINER Serdar Sarioglu, Serdar.Sarioglu@mysystem.org
 
 # Install Basic Tools
 RUN apt-get update -y && apt-get upgrade -y
-RUN apt-get install -y build-essential ca-certificates wget curl git docker  mysql-client redis-tools nmap zmap dnsutils htop 
+RUN apt-get install -y build-essential ca-certificates wget curl git docker unzip mysql-client redis-tools nmap zmap dnsutils htop 
 RUN apt install -y python3-pip
 
 # Upgrade PIP
@@ -17,7 +17,13 @@ RUN apt-get update && apt-get install -y kubectl
 # Install Azure CLI, AWS CLI and Google Cloud CLI
 RUN pip install awscli --upgrade 
 RUN pip install azure-cli
-RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add - && apt-get update -y && apt-get install google-cloud-cli -y
+RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add - && apt-get update -y && apt-get install google-cloud-3cli -y
+
+# Install Terraform
+RUN wget https://releases.hashicorp.com/terraform/1.2.9/terraform_1.2.9_linux_amd64.zip
+RUN unzip terraform_1.2.9_linux_amd64.zip
+RUN mv terraform /usr/local/bin/
+RUN terraform --version 
 
 #Copy Scripts
 COPY scripts /scripts
