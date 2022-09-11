@@ -13,7 +13,8 @@ RUN pip install --upgrade pip
 RUN wget https://releases.hashicorp.com/terraform/1.2.9/terraform_1.2.9_linux_amd64.zip
 RUN unzip terraform_1.2.9_linux_amd64.zip
 RUN mv terraform /usr/local/bin/
-RUN terraform --version 
+RUN terraform --version
+RUN rm -rf terraform_1.2.9_linux_amd64.zip
 
 #Install Kubectl
 RUN curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
@@ -25,6 +26,7 @@ RUN pip install awscli --upgrade
 RUN pip install azure-cli
 
 #Copy Scripts
+WORKDIR /root
 COPY scripts /scripts
 COPY 11-docker /etc/update-motd.d/
 RUN chmod -R 777 /scripts
